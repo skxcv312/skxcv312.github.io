@@ -1,0 +1,79 @@
+:root {
+  --bg: #f7f8fb;
+  --ink: #17191f;
+  --muted: #5d6472;
+  --soft: #8c94a3;
+  --line: #d9dde6;
+  --purple: #3426d9;
+  --purple-dark: #251bb5;
+  --purple-soft: #ebe8ff;
+  --blue-chip: #d9e6ff;
+  --card: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Segoe UI", sans-serif;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.action {
+  appearance: none;
+  min-width: 211px;
+  height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  border: 1px solid #a8adb9;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #343842;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.85) inset;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.action.primary {
+  min-width: 262px;
+  border-color: transparent;
+  background: var(--purple);
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(52, 38, 217, 0.18);
+}
+
+.action:hover {
+  transform: translateY(-2px);
+  border-color: var(--purple);
+  box-shadow: 0 12px 25px rgba(25, 30, 50, 0.1);
+}
+
+.action.primary:hover {
+  background: var(--purple-dark);
+  box-shadow: 0 14px 28px rgba(52, 38, 217, 0.24);
+}
+
+.icon {
+  width: 21px;
+  height: 21px;
+  flex: 0 0 auto;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}

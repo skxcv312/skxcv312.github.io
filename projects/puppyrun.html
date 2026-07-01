@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PuppyRun Project Detail</title>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/project-detail.css">
+</head>
+<body>
+  <main class="project-page" aria-label="PuppyRun 프로젝트 상세">
+    <section class="module project-intro" aria-labelledby="project-title">
+      <span class="module-label">MODULE: Project Intro</span>
+      <div class="module-inner">
+        <div class="project-logo">
+          <img src="../assets/images/projects/puppyrun/logo.png" alt="PuppyRun">
+        </div>
+        <div class="intro-content">
+          <h1 class="intro-title" id="project-title">PuppyRun</h1>
+          <p class="intro-desc">산책 데이터를 기반으로 반려견의 산책 기록, 일기, 건강 관리, 날씨 기반 산책 지수, 통계 리포트까지 제공하는 반려견 라이프 로그 플랫폼</p>
+          <div class="intro-meta" aria-label="프로젝트 정보">
+            <span>▣ 2026.01 - 2026.6 (6개월)</span>
+            <span>▦ 백엔드 2명, 프론트 2명</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="module" aria-labelledby="topic-title">
+      <span class="module-label">MODULE: 01. Topic Selection</span>
+      <div class="module-inner">
+        <header class="section-head">
+          <span class="section-number">01</span>
+          <h2 class="section-title" id="topic-title">주제 선정 및 역할</h2>
+        </header>
+
+        <div class="two-column">
+          <article class="info-card issue">
+            <h3 class="card-title danger">△ Existing Issues</h3>
+            <ul class="card-list">
+              <li>반려견 산책 기록이 사진, 메모, 지도, 시간 정보로 흩어져 관리됨</li>
+              <li>반려견별 산책량과 활동 데이터를 한눈에 확인하기 어려움</li>
+              <li>산책, 건강, 일상 기록이 분리되어 장기적인 활동 변화와 성장 과정을 한눈에 확인하기 어려움</li>
+            </ul>
+          </article>
+
+          <article class="info-card theme">
+            <h3 class="card-title purple">⚑ Project Theme</h3>
+            <ul class="card-list">
+              <li>반려견 등록, 수정, 프로필 이미지 관리</li>
+              <li>산책 트래킹 기록 저장 및 경로 조회</li>
+              <li>지역 기반 날씨 조회 및 캐싱</li>
+              <li>일간 / 주간 / 월간 활동 통계 제공</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="role-box">
+          <p class="role-title">주요 기능 및 내 역할 (My Role)</p>
+          <ul class="role-list">
+            <li>Spring Boot 기반 백엔드 API 설계 및 구현</li>
+            <li>산책 트래킹, 반려견, 일기 도메인 API 구현</li>
+            <li>S3 이미지 업로드 및 롤백 처리 구조 구현</li>
+            <li>날씨 API 연동, 캐싱, 스케줄러 구현</li>
+            <li>FCM 알림 설정 및 발송 구조 구현</li>
+            <li>QueryDSL 기반 활동 통계 조회 구현</li>
+            <li>Discord Webhook을 활용한 서버 에러 실시간 알림 기능 구현</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="module" aria-labelledby="overview-title">
+      <span class="module-label">MODULE: 02. Project Overview</span>
+      <div class="module-inner">
+        <header class="section-head">
+          <span class="section-number">02</span>
+          <h2 class="section-title" id="overview-title">프로젝트 개요</h2>
+        </header>
+
+        <p class="stack-title">Tech Stack</p>
+        <div class="stack-grid">
+          <div class="stack-card">
+            <span class="stack-label">Backend</span>
+            <span class="stack-value">Java 21, Spring Boot 3.3.5, Spring Data JPA, QueryDSL</span>
+          </div>
+          <div class="stack-card">
+            <span class="stack-label">Database</span>
+            <span class="stack-value">MySQL 8.0</span>
+          </div>
+          <div class="stack-card">
+            <span class="stack-label">Infrastructure</span>
+            <span class="stack-value">AWS EC2, RDS, S3, Docker, GitHub Actions</span>
+          </div>
+          <div class="stack-card">
+            <span class="stack-label">Collaboration</span>
+            <span class="stack-value">Git, GitHub, Notion</span>
+          </div>
+        </div>
+
+        <div class="diagram-grid">
+          <figure class="diagram-card">
+            <img src="../assets/images/projects/puppyrun/architecture.png" alt="PuppyRun 인프라 아키텍처 다이어그램">
+          </figure>
+          <figure class="diagram-card">
+            <img src="../assets/images/projects/puppyrun/erd.png" alt="PuppyRun ERD 다이어그램">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="module" aria-labelledby="features-title">
+      <span class="module-label">MODULE: 03. Key Features</span>
+      <div class="module-inner">
+        <header class="section-head">
+          <span class="section-number">03</span>
+          <h2 class="section-title" id="features-title">핵심 기능 구현</h2>
+        </header>
+
+        <article class="feature-card">
+          <h3 class="feature-title">1. 산책 활동 기록</h3>
+          <p class="problem-role">
+            <strong>Problem/Role:</strong>
+            산책 종료 시 발생하는 시간, 거리, 휴식, 경로, 참여 반려견 데이터를 이후 통계와 일기에서 재사용 가능한 활동 데이터로 저장
+          </p>
+          <div class="performance-box">
+            <p class="performance-label">Performance:</p>
+            <ul class="feature-list">
+              <li>산책 시작/종료 시간, 총 거리, 평균 페이스, 휴식 시간을 함께 기록</li>
+              <li>경로 조회에는 원본 좌표 리스트를 JSON 형태로 보존해 사용하고, 공간 분석과 확장 가능성을 위해 시작 지점, 종료 지점, 전체 경로는 Geometry 기반 데이터로 함께 저장</li>
+              <li>한 번의 산책에 여러 반려견을 연결할 수 있도록 산책-반려견 매핑 구조를 두고, 요청한 반려견이 실제 로그인 사용자의 반려견인지 검증</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <h3 class="feature-title">2. 반려견별 활동 통계</h3>
+          <p class="problem-role">
+            <strong>Problem/Role:</strong>
+            저장된 산책 데이터를 일간, 주간, 월간 통계로 제공해 보호자가 반려견의 활동량을 확인할 수 있도록 구현
+          </p>
+          <div class="performance-box">
+            <p class="performance-label">Performance:</p>
+            <ul class="feature-list">
+              <li>QueryDSL로 날짜별 산책 횟수, 거리, 시간, 휴식 시간을 집계</li>
+              <li>반려견의 견종 정보는 Enum으로 표준화해 관리하고, 반려견별 기본 정보와 산책 기록을 연결해 이후 활동 통계에서 반려견 단위로 산책량을 해석할 수 있도록 구성</li>
+              <li>주간/월간 통계는 여러 조회를 병렬로 처리해 응답 시간을 줄이도록 구성</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <h3 class="feature-title">3. 산책 동기부여 알림 기능</h3>
+          <p class="problem-role">
+            <strong>Problem/Role:</strong>
+            보호자가 산책을 단순 메모가 아니라 시간, 거리, 경로, 휴식, 함께한 반려견까지 포함한 하나의 활동 데이터로 남길 수 있도록 구성
+          </p>
+          <div class="performance-box">
+            <p class="performance-label">Performance:</p>
+            <ul class="feature-list">
+              <li>@Scheduled 기반 산책 리마인드 자동 발송 흐름을 구성하여, 사용자가 앱에 접속하지 않아도 산책 행동을 유도하는 알림 기능 구현</li>
+              <li>알림 발송 흐름과 메시지 생성 로직을 분리하여, 알림 종류 추가 시 전체 구조 수정 없이 메시지만 확장할 수 있도록 전략 패턴 설계</li>
+              <li>알림 수신 동의, 활성 FCM 토큰, 알림 타입 설정을 기준으로 발송 대상을 필터링하고, 대상 조회와 FCM 전송을 배치 단위로 분할 처리하여 대규모 발송 체계 구성</li>
+              <li>실패 토큰을 삭제하지 않고 비활성 상태로 관리하여, 재등록 시 사용자 기존 알림 설정을 유지한 채 복구할 수 있도록 설계</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="module" aria-labelledby="decisions-title">
+      <span class="module-label">MODULE: 04. Technical Decisions</span>
+      <div class="module-inner">
+        <header class="section-head">
+          <span class="section-number">04</span>
+          <h2 class="section-title" id="decisions-title">기술적 의사결정</h2>
+        </header>
+
+        <table class="decision-table">
+          <thead>
+            <tr>
+              <th>Problem</th>
+              <th>Decision</th>
+              <th>Rationale</th>
+              <th>Results</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>대량 알림 대상자 조회 시 성능 저하 예상</td>
+              <td class="decision">사용자 생성일 기준 Cursor 방식으로<br>1000명 단위 배치 조회</td>
+              <td>알림 전체 데이터를 정렬 순서대로 순회하는 작업이므로 페이지 번호보다 마지막 조회 기준값을 사용하는 Cursor 방식이 적합</td>
+              <td>메모리 부담 없이 순차 처리</td>
+            </tr>
+            <tr>
+              <td>산책 경로 데이터가 상세 조회와 위치 기반 분석이라는 서로 다른 목적을 가짐</td>
+              <td class="decision">원본 좌표는 JSON, 공간 데이터는 Point,<br>LineString으로 분리</td>
+              <td>경로 재현에는 원본 좌표가 필요하고, 위치 조회에는 Spatial 타입과 인덱스가 적합</td>
+              <td>경로 재현과 위치 기반 조회 모두 대응</td>
+            </tr>
+            <tr>
+              <td>지역별 날씨 데이터의 외부 API 반복 호출을 줄일 캐시 전략 필요</td>
+              <td class="decision">Caffeine Cache,<br>Spring Scheduled 선택</td>
+              <td>데이터 규모가 작고 TTL이 짧아 별도 Redis보다 로컬 캐시가 단순하고 효율적</td>
+              <td>외부 API 호출 감소</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="module" aria-labelledby="trouble-title">
+      <span class="module-label">MODULE: 05. Troubleshooting</span>
+      <div class="module-inner">
+        <header class="section-head">
+          <span class="section-number">05</span>
+          <h2 class="section-title" id="trouble-title">트러블슈팅 로깅</h2>
+        </header>
+
+        <article class="trouble-card">
+          <h3 class="problem-title">Problem: 통계 조회 시 월별/주별 데이터를 반복 조회하고, 연관 데이터 조합 과정에서 추가 쿼리가 발생해 응답 지연이 발생</h3>
+          <div class="solution-box">
+            <p class="note-title">Solution Steps:</p>
+            <ol class="step-list">
+              <li>통계 조회 성능 개선은 단순히 QueryDSL을 사용한 것이 아니라, 서비스 레이어에서 조회 횟수와 데이터 조합 방식을 함께 개선</li>
+              <li>월간 통계는 월별 반복 조회 대신 기간 전체를 한 번에 조회해 월 단위로 그룹핑</li>
+              <li>주간 통계처럼 서로 의존하지 않는 조회는 CompletableFuture로 병렬 실행해, 여러 통계 데이터를 조합하는 API의 응답 지연을 줄일 수 있는 구조로 개선</li>
+            </ol>
+
+            <p class="result-box">
+              <strong>Final Result/Prevention:</strong>
+              이를 해결하기 위해 기간 전체 데이터를 QueryDSL로 한 번에 조회한 뒤 애플리케이션 레벨에서 월 단위로 그룹핑하도록 변경<br>
+              또한 서로 의존하지 않는 주간 통계 조회는 CompletableFuture로 병렬 처리해 통계 API 응답 시간을 단축할 수 있는 구조로 개선
+            </p>
+          </div>
+        </article>
+
+        <article class="trouble-card">
+          <h3 class="problem-title">Problem: S3는 DB 트랜잭션에 포함되지 않기 때문에, 업로드 성공 후 DB 저장이 실패하면 파일이 S3에 남는 문제 발생</h3>
+          <div class="solution-box">
+            <p class="note-title">Solution Steps:</p>
+            <ol class="step-list">
+              <li>S3는 DB 트랜잭션에 포함되지 않는 외부 저장소이므로, DB 저장이 실패해도 이미 업로드된 S3 파일은 자동으로 롤백되지 않는 문제를 원인으로 파악</li>
+              <li>S3 업로드 성공 직후 업로드된 file key를 S3RollbackEvent에 담아 ApplicationEvent로 등록</li>
+              <li>DB 트랜잭션이 실패한 경우에만 @TransactionalEventListener의 AFTER_ROLLBACK 단계에서 이벤트 처리</li>
+            </ol>
+
+            <p class="result-box">
+              <strong>Final Result/Prevention:</strong>
+              DB 롤백만으로는 S3 파일이 되돌아가지 않기 때문에, 업로드 성공 시 file key를 S3RollbackEvent로 등록하고, 트랜잭션이 실패한 경우에만 AFTER_ROLLBACK 단계에서 S3 파일을 삭제하도록 보상 트랜잭션을 적용
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="module" aria-labelledby="links-title">
+      <span class="module-label">MODULE: 06. Links</span>
+      <div class="module-inner">
+        <header class="section-head">
+          <span class="section-number">06</span>
+          <h2 class="section-title" id="links-title">프로젝트 링크</h2>
+        </header>
+
+        <div class="repo-card">
+          <p class="repo-label">&lt;&gt; GitHub Repository</p>
+          <a class="repo-link" href="https://github.com/2026-SubProject-PuppyRun/BackEnd" target="_blank" rel="noreferrer">https://github.com/2026-SubProject-PuppyRun/BackEnd</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

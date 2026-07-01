@@ -1,0 +1,518 @@
+.project-page {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 72px 68px 150px;
+}
+
+.module {
+  position: relative;
+  border: 1px solid #d8dde6;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 1px 0 rgba(18, 22, 35, 0.02);
+}
+
+.module + .module {
+  margin-top: 96px;
+}
+
+.module-label {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  min-width: 168px;
+  padding: 8px 13px 7px;
+  border: 1px solid #c7d5ee;
+  background: #dbe7fb;
+  color: #647086;
+  font-family: "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+
+.module-inner {
+  padding: 50px 25px 25px;
+}
+
+.project-intro {
+  min-height: 386px;
+}
+
+.project-intro .module-inner {
+  min-height: inherit;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  align-items: center;
+  gap: 58px;
+}
+
+.project-logo {
+  width: 294px;
+  height: 294px;
+  border: 1px solid #d7dbe5;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.project-logo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.intro-title {
+  margin: 0 0 24px;
+  font-size: 39px;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.intro-desc {
+  margin: 0 0 26px;
+  color: #4d5564;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.intro-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 31px;
+  color: #4b5361;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.intro-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-number {
+  color: #8d78db;
+  font-size: 37px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.section-title {
+  margin: 0;
+  color: var(--ink);
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-top: 24px;
+}
+
+.info-card {
+  min-height: 171px;
+  padding: 27px 22px;
+  border: 1px solid #e2e5ec;
+  background: #ffffff;
+}
+
+.info-card.issue {
+  background: #fff7f7;
+  border-color: #f2dfdf;
+}
+
+.info-card.theme {
+  background: #faf8ff;
+  border-color: #e8e2fb;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 17px;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.card-title.danger {
+  color: #b32835;
+}
+
+.card-title.purple {
+  color: #3c319c;
+}
+
+.card-list,
+.role-list,
+.feature-list,
+.step-list {
+  margin: 0;
+  padding-left: 23px;
+  color: #343b48;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 2;
+}
+
+.role-box {
+  margin-top: 23px;
+  padding: 24px 22px;
+  border: 1px solid #d7dce5;
+  background: #f6f7f9;
+}
+
+.role-title,
+.stack-title,
+.note-title {
+  margin: 0 0 14px;
+  color: #4e5666;
+  font-family: "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.role-list {
+  font-weight: 800;
+}
+
+.role-list li + li {
+  margin-top: 4px;
+}
+
+.stack-title {
+  margin-top: 24px;
+  padding-left: 10px;
+  border-left: 3px solid var(--purple);
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.stack-card {
+  min-height: 74px;
+  padding: 14px 15px;
+  border: 1px solid #d9dde6;
+  background: #ffffff;
+}
+
+.stack-label {
+  display: block;
+  margin-bottom: 6px;
+  color: #8a92a1;
+  font-family: "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.stack-value {
+  color: #262b34;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.diagram-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 22px;
+}
+
+.diagram-card {
+  margin: 0;
+  height: 489px;
+  border: 1px dashed #9ca3af;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.diagram-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.diagram-card-tall {
+  height: 545px;
+}
+
+.feature-card {
+  padding: 29px 23px 23px;
+  border: 1px solid #d8dde6;
+  background: #ffffff;
+}
+
+.feature-card + .feature-card {
+  margin-top: 23px;
+}
+
+.feature-title {
+  margin: 0 0 16px;
+  font-size: 24px;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.problem-role {
+  margin: 0 0 23px;
+  color: #4e5666;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.problem-role strong {
+  display: block;
+  margin-bottom: 2px;
+  color: #343b48;
+  font-size: 15px;
+}
+
+.performance-box {
+  padding: 18px 22px 18px 18px;
+  border-left: 5px solid #d9792e;
+  background: #f4f5f7;
+}
+
+.performance-label {
+  margin: 0 0 7px;
+  color: #b56d3c;
+  font-family: "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.feature-list {
+  padding-left: 20px;
+  line-height: 2.05;
+}
+
+.decision-table {
+  width: 100%;
+  margin-top: 24px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background: #ffffff;
+}
+
+.decision-table th {
+  padding: 25px 18px;
+  background: #eceeef;
+  color: #3f4550;
+  font-family: "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
+  font-size: 15px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.decision-table td {
+  padding: 33px 16px;
+  color: #343b48;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.75;
+  vertical-align: top;
+}
+
+.decision-table .decision {
+  color: var(--purple);
+  font-weight: 900;
+}
+
+.trouble-card {
+  padding: 27px 24px 24px;
+  border: 1px solid #d8dde6;
+  background: #ffffff;
+}
+
+.trouble-card + .trouble-card {
+  margin-top: 24px;
+}
+
+.problem-title {
+  margin: 0 0 70px;
+  color: #b72c35;
+  font-size: 28px;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.solution-box {
+  padding: 30px 24px 21px;
+  border: 1px solid #d6dae3;
+  border-left: 5px solid #e31f2f;
+  background: #ffffff;
+}
+
+.step-list {
+  margin-left: 150px;
+  padding-left: 22px;
+}
+
+.result-box {
+  margin-top: 25px;
+  padding: 17px 13px;
+  background: #faf9ff;
+  color: #434b58;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.65;
+}
+
+.result-box strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #5043b7;
+  font-weight: 900;
+}
+
+.repo-card {
+  width: min(100%, 1060px);
+  margin: 26px auto 0;
+  padding: 18px 25px 29px;
+  border-radius: 8px;
+  background: #2c3033;
+  color: #dfe3e8;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.section-head-centered {
+  justify-content: center;
+}
+
+.repo-label {
+  margin: 0 0 20px;
+  color: #c7cbd1;
+  font-family: "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.repo-link {
+  display: block;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 650;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 160ms ease;
+}
+
+.repo-link:hover {
+  color: #dbe7fb;
+}
+
+@media (max-width: 1040px) {
+  .project-page {
+    padding: 50px 24px 90px;
+  }
+
+  .project-intro .module-inner,
+  .two-column,
+  .stack-grid,
+  .diagram-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-logo {
+    width: 240px;
+    height: 240px;
+  }
+
+  .step-list {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .project-page {
+    width: 100vw;
+    padding: 28px 18px 64px;
+    overflow-x: hidden;
+  }
+
+  .module + .module {
+    margin-top: 54px;
+  }
+
+  .module-label {
+    position: static;
+    display: block;
+    margin-left: auto;
+    border-top: 0;
+    border-right: 0;
+  }
+
+  .module-inner {
+    padding: 30px 18px 18px;
+  }
+
+  .project-intro .module-inner {
+    gap: 28px;
+  }
+
+  .project-logo {
+    width: 190px;
+    height: 190px;
+  }
+
+  .intro-title {
+    font-size: 32px;
+  }
+
+  .section-number {
+    font-size: 32px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .diagram-card {
+    height: 280px;
+  }
+
+  .diagram-card-tall {
+    height: 320px;
+  }
+
+  .decision-table {
+    display: block;
+    overflow-x: auto;
+    min-width: 760px;
+  }
+
+  .problem-title {
+    margin-bottom: 36px;
+    font-size: 21px;
+  }
+
+  .repo-link {
+    overflow-wrap: anywhere;
+    font-size: 16px;
+  }
+}
