@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algoboza Project Detail</title>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/project-detail.css">
+</head>
+<body>
+  <main class="project-page" aria-label="ALGOBOZA 프로젝트 상세">
+    <section class="module project-intro" aria-labelledby="project-title">
+      <span class="module-label">MODULE: Project Intro</span>
+      <div class="module-inner">
+        <div class="project-logo">
+          <img src="../assets/images/projects/algoboza/logo.png" alt="algoboza">
+        </div>
+        <div class="intro-content">
+          <h1 class="intro-title" id="project-title">Algoboza</h1>
+          <p class="intro-desc">쿠팡, 무신사, 네이버 지도 등 여러 플랫폼에 흩어진 사용자 행동 로그를 자동 통합하고 유저의 맥락에 맞는 상품, 장소, 콘텐츠를 능동적으로 제안하는 개인화 추천 플랫폼</p>
+          <div class="intro-meta" aria-label="프로젝트 정보">
+            <span>▣ 2025.03 - 2025.7 (4개월)</span>
+            <span>▦ 백엔드 2명, 프론트 1명</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="module" aria-labelledby="topic-title">
+      <span class="module-label">MODULE: 01. Topic Selection</span>
+      <div class="module-inner">
+        <header class="section-head">
+          <span class="section-number">01</span>
+          <h2 class="section-title" id="topic-title">주제 선정 및 역할</h2>
+        </header>
+
+        <div class="two-column">
+          <article class="info-card issue">
+            <h3 class="card-title danger">△ Existing Issues</h3>
+            <ul class="card-list">
+              <li>사용자의 검색, 클릭, 조회, 장바구니, 장소 탐색 기록이 여러 플랫폼에 흩어져 있어 관심사를 파악하기 어려움</li>
+              <li>특정 플랫폼 내부 데이터에 의존해 추천 범위가 제한적이며, 복합적인 행동 패턴을 충분히 반영하지 못함</li>
+              <li>사용자는 관심 키워드와 취향 변화를 한눈에 확인하거나, 이를 기반으로 콘텐츠를 통합 추천받기 어려움</li>
+            </ul>
+          </article>
+
+          <article class="info-card theme">
+            <h3 class="card-title purple">⚑ Project Theme</h3>
+            <ul class="card-list">
+              <li>Chrome Extension으로 무신사, 쿠팡, 네이버 쇼핑·플레이스 등에서 발생하는 행동 로그를 수집</li>
+              <li>수집된 로그를 검색, 상품, 카테고리, 장바구니, 장소 데이터로 분류하고 관심 키워드 점수를 계산</li>
+              <li>분석된 관심사를 기반으로 네이버 쇼핑 상품, 지역 장소, YouTube 영상을 개인화 추천</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="role-box">
+          <p class="role-title">주요 기능 및 내 역할 (My Role)</p>
+          <ul class="role-list">
+            <li>수집 로그 저장 및 분류 기능 구현</li>
+            <li>Chrome Extension 기반 검색어, 상품 조회, 카테고리 탐색, 장바구니, 장소 검색, 클릭, 체류 시간, 스크롤 데이터 수집</li>
+            <li>검색, 상품 조회, 장바구니, 장소 클릭 등 행동 로그를 유형별로 분류하고, 행동 중요도와 체류 시간 기준을 가중치로 반영해 사용자 관심 키워드 점수를 산출</li>
+            <li>관심 키워드를 그룹화하고 네이버 쇼핑·지역 검색 API를 활용해 맞춤형 상품과 장소 추천</li>
+            <li>관심 점수를 기반으로 영상 검색어를 생성하고, YouTube 영상 정보와 자막/설명 요약 제공</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="module" aria-labelledby="overview-title">
+      <span class="module-label">MODULE: 02. Project Overview</span>
+      <div class="module-inner">
+        <header class="section-head">
+          <span class="section-number">02</span>
+          <h2 class="section-title" id="overview-title">프로젝트 개요</h2>
+        </header>
+
+        <p class="stack-title">Tech Stack</p>
+        <div class="stack-grid">
+          <div class="stack-card">
+            <span class="stack-label">Backend</span>
+            <span class="stack-value">Java 21, Spring Boot 3.4.3, Spring Security, JPA</span>
+          </div>
+          <div class="stack-card">
+            <span class="stack-label">Database</span>
+            <span class="stack-value">MySQL 8.0, Redis</span>
+          </div>
+          <div class="stack-card">
+            <span class="stack-label">Infrastructure</span>
+            <span class="stack-value">AWS EC2/RDS, Docker</span>
+          </div>
+          <div class="stack-card">
+            <span class="stack-label">Collaboration</span>
+            <span class="stack-value">Git, GitHub, Notion</span>
+          </div>
+        </div>
+
+        <div class="diagram-grid">
+          <figure class="diagram-card diagram-card-tall">
+            <img src="../assets/images/projects/algoboza/architecture.png" alt="ALGOBOZA 시스템 아키텍처 다이어그램">
+          </figure>
+          <figure class="diagram-card diagram-card-tall">
+            <img src="../assets/images/projects/algoboza/components.png" alt="ALGOBOZA 주요 구성 요소 및 행동 로그 수집 플로우">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="module" aria-labelledby="features-title">
+      <span class="module-label">MODULE: 03. Key Features</span>
+      <div class="module-inner">
+        <header class="section-head">
+          <span class="section-number">03</span>
+          <h2 class="section-title" id="features-title">핵심 기능 구현</h2>
+        </header>
+
+        <article class="feature-card">
+          <h3 class="feature-title">1. 웹 행동 로그 수집</h3>
+          <p class="problem-role">
+            <strong>Problem/Role:</strong>
+            사용자의 검색, 클릭, 상품 조회, 장바구니, 장소 탐색 기록이 여러 웹사이트에 흩어져 있어 관심사 분석에 활용하기 어려운 문제를 해결하기 위해 Chrome Extension 기반 로그 수집 기능을 구현
+          </p>
+          <div class="performance-box">
+            <p class="performance-label">Performance:</p>
+            <ul class="feature-list">
+              <li>무신사, 쿠팡, 네이버 쇼핑·플레이스 등 사이트별 페이지 구조에 맞춰 검색어, 상품명, 가격, 카테고리, 장바구니, 장소 정보를 수집</li>
+              <li>페이지 체류 시간, 총 스크롤 거리, 클릭 액션을 함께 기록하여 단순 조회 여부가 아니라 사용자의 실제 관심 강도를 분석할 수 있도록 구성</li>
+              <li>수집 로그를 search, product, category, cart, naver_place 타입으로 표준화하여 서버에서 일관된 방식으로 저장 및 처리 가능하도록 설계</li>
+              <li>서버 전송과 동시에 로컬 스토리지에도 로그를 저장하고 JSON 파일로 다운로드할 수 있도록 구성하여 테스트와 데이터 검증 편의성 확보</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <h3 class="feature-title">2. 관심 키워드 점수 계산</h3>
+          <p class="problem-role">
+            <strong>Problem/Role:</strong>
+            사용자의 행동 로그를 단순 저장하는 것에 그치지 않고, 어떤 키워드에 더 높은 관심을 보였는지 정량적으로 판단할 수 있도록 관심도 점수 산정 로직을 구현
+          </p>
+          <div class="performance-box">
+            <p class="performance-label">Performance:</p>
+            <ul class="feature-list">
+              <li>검색, 상품 조회, 카테고리 탐색, 장바구니, 장소 검색 등 행동 유형별로 서로 다른 가중치를 부여하여 관심도 계산</li>
+              <li>체류 시간과 스크롤 데이터를 함께 반영해 오래 머문 페이지와 적극적으로 탐색한 페이지의 키워드 점수가 더 높게 계산되도록 구성</li>
+              <li>상품 좋아요, 장바구니 클릭, 상품 정보 더보기 등 세부 클릭 행동을 추가 점수로 반영하여 사용자의 명시적 관심 행동을 분석에 포함</li>
+              <li>여러 연결 이메일에서 수집된 로그를 사용자 단위로 통합하고, 쇼핑 관심 키워드와 장소 관심 키워드를 분리해 추천에 활용할 수 있도록 설계</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <h3 class="feature-title">3. 맞춤형 상품, 장소 추천</h3>
+          <p class="problem-role">
+            <strong>Problem/Role:</strong>
+            분석된 관심 키워드를 실제 추천 결과로 연결하기 위해 AI 키워드 그룹화와 네이버 쇼핑·지역 검색 API를 연동한 개인화 추천 기능을 구현
+          </p>
+          <div class="performance-box">
+            <p class="performance-label">Performance:</p>
+            <ul class="feature-list">
+              <li>관심 키워드를 쇼핑과 장소 유형으로 분류하고, 유사 키워드를 대표 키워드와 옵션 키워드로 그룹화하여 검색 품질 개선</li>
+              <li>네이버 쇼핑 API를 활용해 사용자의 쇼핑 관심사에 맞는 상품 목록을 추천</li>
+              <li>네이버 지역 검색 API를 활용해 사용자가 관심을 보인 장소, 지역, 카테고리를 기반으로 맞춤형 장소 추천 제공</li>
+              <li>추천 결과의 중복 제목을 제거하고, Redis/MySQL 기반 캐싱 구조를 적용해 반복 요청 시 불필요한 재계산을 줄이도록 구성</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <h3 class="feature-title">4. YouTube 영상 추천 및 요약</h3>
+          <p class="problem-role">
+            <strong>Problem/Role:</strong>
+            상품과 장소 추천을 넘어 사용자의 관심사를 영상 콘텐츠로 확장하기 위해 관심 키워드 기반 YouTube 추천 및 요약 기능을 구현
+          </p>
+          <div class="performance-box">
+            <p class="performance-label">Performance:</p>
+            <ul class="feature-list">
+              <li>사용자의 관심 키워드 점수를 기반으로 AI가 YouTube 검색어를 생성하도록 구성</li>
+              <li>YouTube Data API를 활용해 관련 영상의 제목, 채널, 길이, 썸네일, 업로드 일자 정보를 조회</li>
+              <li>짧은 영상은 제외하고 일정 길이 이상의 영상만 추천하여 콘텐츠 품질을 유지</li>
+              <li>영상 자막 또는 설명을 추출한 뒤 AI 요약을 제공하여 사용자가 영상을 보기 전에 핵심 내용을 빠르게 파악할 수 있도록 구현</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="module" aria-labelledby="decisions-title">
+      <span class="module-label">MODULE: 04. Technical Decisions</span>
+      <div class="module-inner">
+        <header class="section-head">
+          <span class="section-number">04</span>
+          <h2 class="section-title" id="decisions-title">기술적 의사결정</h2>
+        </header>
+
+        <table class="decision-table">
+          <thead>
+            <tr>
+              <th>Problem</th>
+              <th>Decision</th>
+              <th>Rationale</th>
+              <th>Results</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>추천 요청마다 관심사 점수와 추천 결과를 다시 계산하면 외부 API 호출 비용과 응답 지연 발생</td>
+              <td class="decision">관심 키워드와 추천 결과를 저장하고, 로그 변경 횟수 기준으로 재계산</td>
+              <td>추천 결과는 로그가 1개 추가될 때마다 즉시 바뀔 필요가 없고, API 호출은 비용과 시간이 크기 때문에 재사용 기준이 필요</td>
+              <td>반복 요청에서는 기존 추천 결과를 재사용하고, 기준치 이상의 신규 로그가 쌓였을 때만 재계산하도록 개선</td>
+            </tr>
+            <tr>
+              <td>AI 키워드 처리와 YouTube/Naver API 연동을 메인 서버에 둘 경우 복잡도 증가</td>
+              <td class="decision">Spring Boot는 로그인/추천 흐름 담당,<br>FastAPI는 AI 키워드 처리와 YouTube 추천 담당</td>
+              <td>Python 생태계가 AI 및 자막 처리에 적합하고, AI 로직 변경이 메인 서버에 주는 영향을 줄일 수 있음</td>
+              <td>메인 서버 역할이 명확해지고, AI 추천 로직을 독립적으로 수정/확장 가능</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="module" aria-labelledby="trouble-title">
+      <span class="module-label">MODULE: 05. Troubleshooting</span>
+      <div class="module-inner">
+        <header class="section-head">
+          <span class="section-number">05</span>
+          <h2 class="section-title" id="trouble-title">트러블슈팅 로깅</h2>
+        </header>
+
+        <article class="trouble-card">
+          <h3 class="problem-title">Problem: YouTube 영상 요약 기능에서 영상 전체 내용을 AI에 그대로 전달할 경우 토큰 사용량이 과도하게 증가</h3>
+          <div class="solution-box">
+            <p class="note-title">Solution Steps:</p>
+            <ol class="step-list">
+              <li>YouTube 영상 파일을 AI에 직접 전달하지 않고, 먼저 영상 정보와 자막 데이터를 분리해서 조회하도록 구성</li>
+              <li>전체 자막을 모두 사용하지 않고, 영상의 10초부터 600초까지의 자막만 요약 대상으로 필터링</li>
+              <li>자막이 없거나 내용이 너무 짧은 경우에는 영상 설명란을 대체 텍스트로 사용해 요약이 중단되지 않도록 구성</li>
+            </ol>
+
+            <p class="result-box">
+              <strong>Final Result/Prevention:</strong>
+              전체 자막을 그대로 전달하던 구조에서 10초~600초 구간만 선별해 전달하도록 변경하여 AI 입력 토큰 수를 줄이고, 자막이 없는 영상은 설명란을 대체 입력으로 사용해 요약 실패 케이스를 방지
+            </p>
+          </div>
+        </article>
+
+        <article class="trouble-card">
+          <h3 class="problem-title">Problem: 초기 알고리즘 설계는 사용자 로그를 실시간으로 반영하는 방식이었으나,<br>로그가 추가될 때마다 알고리즘을 다시 계산하면서 추천 응답 속도 저하 발생</h3>
+          <div class="solution-box">
+            <p class="note-title">Solution Steps:</p>
+            <ol class="step-list">
+              <li>로그가 저장될 때마다 추천 알고리즘을 즉시 실행하지 않고, 먼저 사용자의 로그 변경 상태만 기록하도록 변경</li>
+              <li>추천 요청 시 기존 관심 키워드 점수 데이터가 있고 신규 로그가 기준치 미만이면, 전체 로그를 재분석하지 않고 기존 점수와 추천 결과를 재사용</li>
+              <li>신규 로그가 기준치만큼 쌓였을 때만 개인 알고리즘을 다시 실행해 관심 키워드 점수를 재계산하도록 구성</li>
+              <li>재계산이 필요한 경우 기존 추천 결과를 삭제하고, 검색/상품/카테고리/장바구니/장소 로그를 다시 분석해 최신 관심 키워드를 생성</li>
+            </ol>
+
+            <p class="result-box">
+              <strong>Final Result/Prevention:</strong>
+              로그가 들어올 때마다 추천 알고리즘을 실행하던 구조를 개선해 불필요한 재계산을 줄였고, 기준이 충족될 때만 개인 알고리즘을 갱신하도록 변경<br>
+              정량 측정은 진행하지 못했지만, 추천 요청마다 외부 API를 호출하던 구조를 기준 충족 시 재계산하는 방식으로 변경해 반복 요청에서 불필요한 호출을 줄일 수 있는 구조로 개선
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="module" aria-labelledby="links-title">
+      <span class="module-label">MODULE: 06. Links</span>
+      <div class="module-inner">
+        <header class="section-head section-head-centered">
+          <span class="section-number">06</span>
+          <h2 class="section-title" id="links-title">프로젝트 링크</h2>
+        </header>
+
+        <div class="repo-card">
+          <p class="repo-label">&lt;&gt; GitHub Repository</p>
+          <a class="repo-link" href="https://github.com/skxcv312/algoboza" target="_blank" rel="noreferrer">https://github.com/skxcv312/algoboza</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
