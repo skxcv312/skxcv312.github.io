@@ -190,19 +190,31 @@
               <td>대량 알림 대상자 조회 시 성능 저하 예상</td>
               <td class="decision">사용자 생성일 기준 Cursor 방식으로<br>1000명 단위 배치 조회</td>
               <td>알림 전체 데이터를 정렬 순서대로 순회하는 작업이므로 페이지 번호보다 마지막 조회 기준값을 사용하는 Cursor 방식이 적합</td>
-              <td>메모리 부담 없이 순차 처리</td>
+              <td>전체 대상자를 한 번에 메모리에 올리지 않고 순차 처리 가능 <br> 사용자 수가 증가해도 안정적으로 알림 대상자 조회 가능</td>
             </tr>
             <tr>
               <td>산책 경로 데이터가 상세 조회와 위치 기반 분석이라는 서로 다른 목적을 가짐</td>
               <td class="decision">원본 좌표는 JSON, 공간 데이터는 Point,<br>LineString으로 분리</td>
               <td>경로 재현에는 원본 좌표가 필요하고, 위치 조회에는 Spatial 타입과 인덱스가 적합</td>
-              <td>경로 재현과 위치 기반 조회 모두 대응</td>
+              <td>상세 조회와 위치 기반 추천으로 확장 가능한 경로 데이터 구조 확보</td>
+            </tr>
+            <tr>
+              <td>사용자별 산책 상태에 따라 매일 개인화 리마인드 알림 발송 필요</td>
+              <td class="decision">Spring Scheduled 선택</td>
+              <td>DB 조회, 알림 설정, FCM 발송이 기존 도메인 로직과 밀접해 내부 스케줄러가 적합</td>
+              <td>별도 인프라 없이 배치 조회, 메시지 생성, 실패 토큰 처리를 통합 관리</td>
             </tr>
             <tr>
               <td>지역별 날씨 데이터의 외부 API 반복 호출을 줄일 캐시 전략 필요</td>
-              <td class="decision">Caffeine Cache,<br>Spring Scheduled 선택</td>
+              <td class="decision">Caffeine Cache 선택</td>
               <td>데이터 규모가 작고 TTL이 짧아 별도 Redis보다 로컬 캐시가 단순하고 효율적</td>
-              <td>외부 API 호출 감소</td>
+              <td>외부 API 호출 감소 및 별도 인프라 없는 경량 캐시 구조 구현</td>
+            </tr>
+            <tr>
+              <td>알림 유형마다 메시지 생성 기준은 다르지만, 대상자 조회와 FCM 발송 흐름은 반복됨</td>
+              <td class="decision">대상자 조회/FCM 전송은 공통화하고,<br>알림별 메시지 생성 규칙만 전략 패턴으로 분리</td>
+              <td>대량 조회, 커서 페이징, FCM 배치 발송은 공통 로직으로 유지하고, 알림별 메시지 생성 패턴만 독립적으로 교체 가능</td>
+              <td>새 알림 유형 추가 시 공통 발송 흐름은 유지하고, 메시지 생성 전략 패턴만 추가해 확장 가능</td>
             </tr>
           </tbody>
         </table>
@@ -254,11 +266,75 @@
       </div>
     </section>
 
-    <section class="module" aria-labelledby="links-title">
-      <span class="module-label">MODULE: 06. Links</span>
+    <section class="module" aria-labelledby="workflow-title">
+      <span class="module-label">MODULE: 06. Workflow Automation</span>
       <div class="module-inner">
         <header class="section-head">
           <span class="section-number">06</span>
+          <h2 class="section-title" id="workflow-title">에이전트 기반 개발 워크플로 개선</h2>
+        </header>
+
+        <div class="two-column workflow-summary">
+          <article class="info-card issue">
+            <h3 class="card-title danger">△ Existing Issues</h3>
+            <ul class="card-list">
+              <li>PR 작성, 커밋 메시지 작성, 코드 리뷰 준비처럼 반복되는 개발 운영 업무가 많음</li>
+              <li>작업자마다 작성 기준이 달라질 경우 협업 품질이 흔들릴 수 있다고 판단</li>
+            </ul>
+          </article>
+
+          <article class="info-card theme">
+            <h3 class="card-title purple">⚑ Approach</h3>
+            <ul class="card-list">
+              <li>Gemini CLI가 프로젝트 컨텍스트를 일관되게 이해할 수 있도록 GEMINI.md를 작성</li>
+              <li>반복 업무를 하나의 범용 AI에게 맡기기보다 목적에 따라 역할별 에이전트를 분리</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="workflow-implementation">
+          <p class="note-title">Implementation:</p>
+
+          <div class="workflow-item">
+            <p class="workflow-item-title">code-reviewer 에이전트:</p>
+            <p>코드 변경 사항을 검토하는 역할로 분리</p>
+            <p>보안 취약점, 성능 문제, N+1 쿼리 가능성, 예외 처리 방식, 프로젝트 컨벤션 준수 여부를 중점적으로 점검하도록 정의</p>
+          </div>
+
+          <div class="workflow-item">
+            <p class="workflow-item-title">project-manager 에이전트:</p>
+            <p>구현 세부사항보다 아키텍처 방향, 기능 우선순위, 기술 선택의 타당성을 검토하는 역할로 분리</p>
+            <p>복잡한 기능을 구현하기 전 데이터 흐름, 도메인 책임, 확장 가능성을 먼저 점검하는 용도로 활용</p>
+          </div>
+
+          <div class="workflow-item">
+            <p class="workflow-item-title">PR 작성 컨벤션:</p>
+            <p>git diff, 커밋 히스토리, 변경된 DTO/Service/Exception 구조를 분석해 PR 초안을 만들 수 있도록 규칙을 정의</p>
+            <p>Summary, Changes, Test Scenarios 형식을 고정해 PR 설명 품질을 일정하게 유지</p>
+          </div>
+
+          <div class="workflow-item">
+            <p class="workflow-item-title">커밋 메시지 컨벤션:</p>
+            <p>변경 파일과 작업 의도를 기준으로 커밋 메시지 초안을 작성할 수 있도록 형식을 정의</p>
+            <p>type, subject, issue number, 변경 클래스별 상세 내용을 포함하도록 구성</p>
+          </div>
+        </div>
+
+        <div class="workflow-result">
+          <p class="note-title">Result</p>
+          <ul class="workflow-result-list">
+            <li>반복적인 문서 작성 시간을 줄이고, PR과 커밋 메시지의 형식을 일관되게 유지</li>
+            <li>코드 리뷰 시 보안, 성능, 예외 처리, 컨벤션 준수 여부를 빠르게 점검할 수 있는 개발 흐름 구성</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="module" aria-labelledby="links-title">
+      <span class="module-label">MODULE: 07. Links</span>
+      <div class="module-inner">
+        <header class="section-head">
+          <span class="section-number">07</span>
           <h2 class="section-title" id="links-title">프로젝트 링크</h2>
         </header>
 

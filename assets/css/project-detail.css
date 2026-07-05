@@ -384,6 +384,66 @@
   font-weight: 900;
 }
 
+.workflow-summary .info-card {
+  min-height: 143px;
+}
+
+.workflow-implementation {
+  margin-top: 23px;
+  padding: 21px 22px 22px;
+  border-left: 5px solid #858a99;
+  background: #f2f3f5;
+}
+
+.workflow-item {
+  position: relative;
+  padding-left: 18px;
+  color: #343b48;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.85;
+}
+
+.workflow-item::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #343b48;
+}
+
+.workflow-item + .workflow-item {
+  margin-top: 17px;
+}
+
+.workflow-item p {
+  margin: 0;
+}
+
+.workflow-item-title {
+  font-weight: 800;
+}
+
+.workflow-result {
+  margin-top: 24px;
+  padding: 20px 22px;
+  border: 1px solid #d6dae3;
+  background: #f6f7f9;
+}
+
+.workflow-result .note-title {
+  margin-bottom: 11px;
+}
+
+.workflow-result-list {
+  margin: 0;
+  padding-left: 24px;
+  color: #343b48;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 2;
+}
+
 .repo-card {
   width: min(100%, 1060px);
   margin: 26px auto 0;
