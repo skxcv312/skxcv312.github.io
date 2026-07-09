@@ -15,65 +15,37 @@
         <div class="project-logo">
           <img src="../assets/images/projects/algoboza/logo.png" alt="algoboza">
         </div>
+
         <div class="intro-content">
           <h1 class="intro-title" id="project-title">Algoboza</h1>
           <p class="intro-desc">쿠팡, 무신사, 네이버 지도 등 여러 플랫폼에 흩어진 사용자 행동 로그를 자동 통합하고 유저의 맥락에 맞는 상품, 장소, 콘텐츠를 능동적으로 제안하는 개인화 추천 플랫폼</p>
           <div class="intro-meta" aria-label="프로젝트 정보">
-            <span>▣ 2025.03 - 2025.7 (4개월)</span>
-            <span>▦ 백엔드 2명, 프론트 1명</span>
+            <span><span class="meta-icon" aria-hidden="true">□</span>2025.03 - 2025.7 (4개월)</span>
+            <span><span class="meta-icon" aria-hidden="true">♙</span>백엔드 2명, 프론트 1명</span>
+            <a href="https://github.com/skxcv312/algoboza" target="_blank" rel="noreferrer"><span class="meta-icon" aria-hidden="true">&lt;&gt;</span>https://github.com/skxcv312/algoboza</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="module" aria-labelledby="topic-title">
-      <span class="module-label">MODULE: 01. Topic Selection</span>
+    <section class="module" aria-labelledby="overview-title">
+      <span class="module-label">MODULE: 01. Project Overview</span>
       <div class="module-inner">
         <header class="section-head">
           <span class="section-number">01</span>
-          <h2 class="section-title" id="topic-title">주제 선정 및 역할</h2>
-        </header>
-
-        <div class="two-column">
-          <article class="info-card issue">
-            <h3 class="card-title danger">△ Existing Issues</h3>
-            <ul class="card-list">
-              <li>사용자의 검색, 클릭, 조회, 장바구니, 장소 탐색 기록이 여러 플랫폼에 흩어져 있어 관심사를 파악하기 어려움</li>
-              <li>특정 플랫폼 내부 데이터에 의존해 추천 범위가 제한적이며, 복합적인 행동 패턴을 충분히 반영하지 못함</li>
-              <li>사용자는 관심 키워드와 취향 변화를 한눈에 확인하거나, 이를 기반으로 콘텐츠를 통합 추천받기 어려움</li>
-            </ul>
-          </article>
-
-          <article class="info-card theme">
-            <h3 class="card-title purple">⚑ Project Theme</h3>
-            <ul class="card-list">
-              <li>Chrome Extension으로 무신사, 쿠팡, 네이버 쇼핑·플레이스 등에서 발생하는 행동 로그를 수집</li>
-              <li>수집된 로그를 검색, 상품, 카테고리, 장바구니, 장소 데이터로 분류하고 관심 키워드 점수를 계산</li>
-              <li>분석된 관심사를 기반으로 네이버 쇼핑 상품, 지역 장소, YouTube 영상을 개인화 추천</li>
-            </ul>
-          </article>
-        </div>
-
-        <div class="role-box">
-          <p class="role-title">주요 기능 및 내 역할 (My Role)</p>
-          <ul class="role-list">
-            <li>수집 로그 저장 및 분류 기능 구현</li>
-            <li>Chrome Extension 기반 검색어, 상품 조회, 카테고리 탐색, 장바구니, 장소 검색, 클릭, 체류 시간, 스크롤 데이터 수집</li>
-            <li>검색, 상품 조회, 장바구니, 장소 클릭 등 행동 로그를 유형별로 분류하고, 행동 중요도와 체류 시간 기준을 가중치로 반영해 사용자 관심 키워드 점수를 산출</li>
-            <li>관심 키워드를 그룹화하고 네이버 쇼핑·지역 검색 API를 활용해 맞춤형 상품과 장소 추천</li>
-            <li>관심 점수를 기반으로 영상 검색어를 생성하고, YouTube 영상 정보와 자막/설명 요약 제공</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="module" aria-labelledby="overview-title">
-      <span class="module-label">MODULE: 02. Project Overview</span>
-      <div class="module-inner">
-        <header class="section-head">
-          <span class="section-number">02</span>
           <h2 class="section-title" id="overview-title">프로젝트 개요</h2>
         </header>
+
+        <div class="role-panel">
+          <p class="panel-title">주요 기능 및 내 역할 (My Role)</p>
+          <ul class="role-list">
+            <li><strong>Spring Boot 및 FastAPI</strong> 백엔드 개발</li>
+            <li><strong>Chrome Extension</strong> 기반 검색어, 상품 조회, 카테고리 탐색, 장바구니, 장소 검색, 클릭, 체류 시간, 스크롤 데이터 수집</li>
+            <li>검색, 상품 조회, 장바구니, 장소 클릭 등 행동 로그를 유형별로 분류하고, <strong>행동 중요도와 체류 시간 기준을 가중치</strong>로 반영해 사용자 관심 키워드 점수를 산출</li>
+            <li><strong>관심 키워드 그룹화</strong>와 네이버 쇼핑·지역 검색 API를 활용해 맞춤형 상품과 장소 추천</li>
+            <li>관심 점수를 기반으로 영상 검색어를 생성하고, <strong>YouTube 영상 정보와 자막/설명 요약</strong> 제공</li>
+          </ul>
+        </div>
 
         <p class="stack-title">Tech Stack</p>
         <div class="stack-grid">
@@ -106,177 +78,242 @@
       </div>
     </section>
 
-    <section class="module" aria-labelledby="features-title">
-      <span class="module-label">MODULE: 03. Key Features</span>
-      <div class="module-inner">
-        <header class="section-head">
-          <span class="section-number">03</span>
-          <h2 class="section-title" id="features-title">핵심 기능 구현</h2>
-        </header>
-
-        <article class="feature-card">
-          <h3 class="feature-title">1. 웹 행동 로그 수집</h3>
-          <p class="problem-role">
-            <strong>Problem/Role:</strong>
-            사용자의 검색, 클릭, 상품 조회, 장바구니, 장소 탐색 기록이 여러 웹사이트에 흩어져 있어 관심사 분석에 활용하기 어려운 문제를 해결하기 위해 Chrome Extension 기반 로그 수집 기능을 구현
-          </p>
-          <div class="performance-box">
-            <p class="performance-label">Performance:</p>
-            <ul class="feature-list">
-              <li>무신사, 쿠팡, 네이버 쇼핑·플레이스 등 사이트별 페이지 구조에 맞춰 검색어, 상품명, 가격, 카테고리, 장바구니, 장소 정보를 수집</li>
-              <li>페이지 체류 시간, 총 스크롤 거리, 클릭 액션을 함께 기록하여 단순 조회 여부가 아니라 사용자의 실제 관심 강도를 분석할 수 있도록 구성</li>
-              <li>수집 로그를 search, product, category, cart, naver_place 타입으로 표준화하여 서버에서 일관된 방식으로 저장 및 처리 가능하도록 설계</li>
-              <li>서버 전송과 동시에 로컬 스토리지에도 로그를 저장하고 JSON 파일로 다운로드할 수 있도록 구성하여 테스트와 데이터 검증 편의성 확보</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="feature-card">
-          <h3 class="feature-title">2. 관심 키워드 점수 계산</h3>
-          <p class="problem-role">
-            <strong>Problem/Role:</strong>
-            사용자의 행동 로그를 단순 저장하는 것에 그치지 않고, 어떤 키워드에 더 높은 관심을 보였는지 정량적으로 판단할 수 있도록 관심도 점수 산정 로직을 구현
-          </p>
-          <div class="performance-box">
-            <p class="performance-label">Performance:</p>
-            <ul class="feature-list">
-              <li>검색, 상품 조회, 카테고리 탐색, 장바구니, 장소 검색 등 행동 유형별로 서로 다른 가중치를 부여하여 관심도 계산</li>
-              <li>체류 시간과 스크롤 데이터를 함께 반영해 오래 머문 페이지와 적극적으로 탐색한 페이지의 키워드 점수가 더 높게 계산되도록 구성</li>
-              <li>상품 좋아요, 장바구니 클릭, 상품 정보 더보기 등 세부 클릭 행동을 추가 점수로 반영하여 사용자의 명시적 관심 행동을 분석에 포함</li>
-              <li>여러 연결 이메일에서 수집된 로그를 사용자 단위로 통합하고, 쇼핑 관심 키워드와 장소 관심 키워드를 분리해 추천에 활용할 수 있도록 설계</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="feature-card">
-          <h3 class="feature-title">3. 맞춤형 상품, 장소 추천</h3>
-          <p class="problem-role">
-            <strong>Problem/Role:</strong>
-            분석된 관심 키워드를 실제 추천 결과로 연결하기 위해 AI 키워드 그룹화와 네이버 쇼핑·지역 검색 API를 연동한 개인화 추천 기능을 구현
-          </p>
-          <div class="performance-box">
-            <p class="performance-label">Performance:</p>
-            <ul class="feature-list">
-              <li>관심 키워드를 쇼핑과 장소 유형으로 분류하고, 유사 키워드를 대표 키워드와 옵션 키워드로 그룹화하여 검색 품질 개선</li>
-              <li>네이버 쇼핑 API를 활용해 사용자의 쇼핑 관심사에 맞는 상품 목록을 추천</li>
-              <li>네이버 지역 검색 API를 활용해 사용자가 관심을 보인 장소, 지역, 카테고리를 기반으로 맞춤형 장소 추천 제공</li>
-              <li>추천 결과의 중복 제목을 제거하고, Redis/MySQL 기반 캐싱 구조를 적용해 반복 요청 시 불필요한 재계산을 줄이도록 구성</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="feature-card">
-          <h3 class="feature-title">4. YouTube 영상 추천 및 요약</h3>
-          <p class="problem-role">
-            <strong>Problem/Role:</strong>
-            상품과 장소 추천을 넘어 사용자의 관심사를 영상 콘텐츠로 확장하기 위해 관심 키워드 기반 YouTube 추천 및 요약 기능을 구현
-          </p>
-          <div class="performance-box">
-            <p class="performance-label">Performance:</p>
-            <ul class="feature-list">
-              <li>사용자의 관심 키워드 점수를 기반으로 AI가 YouTube 검색어를 생성하도록 구성</li>
-              <li>YouTube Data API를 활용해 관련 영상의 제목, 채널, 길이, 썸네일, 업로드 일자 정보를 조회</li>
-              <li>짧은 영상은 제외하고 일정 길이 이상의 영상만 추천하여 콘텐츠 품질을 유지</li>
-              <li>영상 자막 또는 설명을 추출한 뒤 AI 요약을 제공하여 사용자가 영상을 보기 전에 핵심 내용을 빠르게 파악할 수 있도록 구현</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="module" aria-labelledby="decisions-title">
-      <span class="module-label">MODULE: 04. Technical Decisions</span>
-      <div class="module-inner">
-        <header class="section-head">
-          <span class="section-number">04</span>
-          <h2 class="section-title" id="decisions-title">기술적 의사결정</h2>
-        </header>
-
-        <table class="decision-table">
-          <thead>
-            <tr>
-              <th>Problem</th>
-              <th>Decision</th>
-              <th>Rationale</th>
-              <th>Results</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>추천 요청마다 관심사 점수와 추천 결과를 다시 계산하면 외부 API 호출 비용과 응답 지연 발생</td>
-              <td class="decision">관심 키워드와 추천 결과를 저장하고, 로그 변경 횟수 기준으로 재계산</td>
-              <td>추천 결과는 로그가 1개 추가될 때마다 즉시 바뀔 필요가 없고, API 호출은 비용과 시간이 크기 때문에 재사용 기준이 필요</td>
-              <td>반복 요청에서는 기존 추천 결과를 재사용하고, 기준치 이상의 신규 로그가 쌓였을 때만 재계산하도록 개선</td>
-            </tr>
-            <tr>
-              <td>AI 키워드 처리와 YouTube/Naver API 연동을 메인 서버에 둘 경우 복잡도 증가</td>
-              <td class="decision">Spring Boot는 로그인/추천 흐름 담당,<br>FastAPI는 AI 키워드 처리와 YouTube 추천 담당</td>
-              <td>Python 생태계가 AI 및 자막 처리에 적합하고, AI 로직 변경이 메인 서버에 주는 영향을 줄일 수 있음</td>
-              <td>메인 서버 역할이 명확해지고, AI 추천 로직을 독립적으로 수정/확장 가능</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
     <section class="module" aria-labelledby="trouble-title">
-      <span class="module-label">MODULE: 05. Troubleshooting</span>
+      <span class="module-label">MODULE: 02. Troubleshooting</span>
       <div class="module-inner">
         <header class="section-head">
-          <span class="section-number">05</span>
+          <span class="section-number">02</span>
           <h2 class="section-title" id="trouble-title">트러블슈팅 로깅</h2>
         </header>
 
         <article class="trouble-card">
-          <h3 class="problem-title">Problem: YouTube 영상 요약 기능에서 영상 전체 내용을 AI에 그대로 전달할 경우 토큰 사용량이 과도하게 증가</h3>
+          <h3 class="problem-title">웹 행동 로그 수집 파이프라인 구축</h3>
+          <p class="note-title">Root Cause:</p>
+          <ul class="cause-list">
+            <li>사용자의 검색, 상품 조회, 장바구니, 장소 탐색 기록이 무신사, 쿠팡, 네이버 등 여러 웹사이트에 흩어져 있어 <strong>관심사 분석에 바로 활용하기 어려웠음</strong></li>
+            <li>사이트마다 <strong>DOM 구조와 URL 패턴</strong>이 달라 동일한 방식으로 상품명, 가격, 카테고리, 검색어, 장소 정보를 추출할 수 없었음</li>
+            <li><strong>SPA 방식 페이지</strong>에서는 URL이 변경되어도 새로고침이 발생하지 않아 로그 누락 가능성이 있었음</li>
+            <li>단순 페이지 방문 기록만으로는 사용자의 실제 관심도를 판단하기 어려워 <strong>체류 시간, 스크롤, 클릭 행동</strong>까지 함께 수집할 필요가 있었음</li>
+          </ul>
+
+          <div class="flow-diagram" aria-label="행동 로그 수집 파이프라인 흐름도">
+            <div class="flow-row" style="--flow-count: 6;">
+              <p class="flow-label">로그 수집</p>
+              <div class="flow-steps">
+                <div class="flow-step"><span class="flow-tag">FLOW</span><span class="flow-text">Chrome Extension 로그 수집</span></div>
+                <div class="flow-step"><span class="flow-tag">CLASSIFY</span><span class="flow-text">로그 타입 분류</span></div>
+                <div class="flow-step"><span class="flow-tag">OBJECT</span><span class="flow-text">행동 로그 생성</span></div>
+                <div class="flow-step"><span class="flow-tag">API</span><span class="flow-text">FastAPI 로그 전송</span></div>
+                <div class="flow-step"><span class="flow-tag">STORE</span><span class="flow-text">MySQL 행동 로그 적재</span></div>
+                <div class="flow-step"><span class="flow-tag warn">UPDATE</span><span class="flow-text danger">event 갱신</span></div>
+              </div>
+            </div>
+            <div class="flow-row" style="--flow-count: 4;">
+              <p class="flow-label emphasis">로그 검증</p>
+              <div class="flow-steps">
+                <div class="flow-step"><span class="flow-tag">LOG</span><span class="flow-text">상세 로그 저장</span></div>
+                <div class="flow-step"><span class="flow-tag">BACKUP</span><span class="flow-text">local storage 저장</span></div>
+                <div class="flow-step"><span class="flow-tag">ACTION</span><span class="flow-text">테스트 데이터 검증</span></div>
+                <div class="flow-step"><span class="flow-tag">STORE</span><span class="flow-text">JSON 다운로드</span></div>
+              </div>
+            </div>
+          </div>
+
           <div class="solution-box">
             <p class="note-title">Solution Steps:</p>
             <ol class="step-list">
-              <li>YouTube 영상 파일을 AI에 직접 전달하지 않고, 먼저 영상 정보와 자막 데이터를 분리해서 조회하도록 구성</li>
-              <li>전체 자막을 모두 사용하지 않고, 영상의 10초부터 600초까지의 자막만 요약 대상으로 필터링</li>
-              <li>자막이 없거나 내용이 너무 짧은 경우에는 영상 설명란을 대체 텍스트로 사용해 요약이 중단되지 않도록 구성</li>
+              <li><strong>Chrome Extension Manifest V3</strong> 기반으로 content script와 background service worker를 구성</li>
+              <li>무신사, 쿠팡, 네이버 <strong>사이트별 핸들러</strong>를 분리해 상품/검색/카테고리/장바구니/장소 페이지 데이터를 각각 추출</li>
+              <li>사이트별로 다른 데이터를 url, timestamp, view, clickTracking, details를 포함한 <strong>공통 로그 포맷으로 표준화</strong></li>
+              <li><strong>viewTracker</strong>를 구현해 체류 시간, 총 스크롤 거리, 탭 비활성 시간, 60초 이상 무활동 시간을 반영</li>
+              <li><strong>MutationObserver와 history.pushState/replaceState 감지</strong>를 통해 SPA URL 변경 시에도 로그를 전송하도록 구성</li>
+              <li>서버 전송과 동시에 <strong>Chrome local storage에 로그를 저장</strong>하고 JSON 파일로 다운로드할 수 있게 하여 테스트 및 데이터 검증 편의성 확보</li>
             </ol>
+          </div>
 
-            <p class="result-box">
-              <strong>Final Result/Prevention:</strong>
-              전체 자막을 그대로 전달하던 구조에서 10초~600초 구간만 선별해 전달하도록 변경하여 AI 입력 토큰 수를 줄이고, 자막이 없는 영상은 설명란을 대체 입력으로 사용해 요약 실패 케이스를 방지
-            </p>
+          <div class="result-box">
+            <p class="note-title">Result:</p>
+            <ul class="result-list">
+              <li>여러 웹사이트에서 발생하는 사용자 행동을 하나의 공통 로그 구조로 수집할 수 있는 <strong>데이터 수집 파이프라인 구축</strong></li>
+              <li>단순 방문 기록이 아닌 <strong>체류 시간, 스크롤, 클릭, 좋아요, 장바구니</strong> 등 실제 관심 행동을 분석 가능한 데이터로 전환</li>
+              <li>SPA 페이지 이동 및 탭 종료 상황에서도 로그가 누락되지 않도록 처리하여 <strong>수집 안정성 개선</strong></li>
+              <li>관심 키워드 점수 계산과 개인화 추천 기능의 <strong>기반 데이터</strong>로 활용 가능하도록 설계</li>
+            </ul>
           </div>
         </article>
 
         <article class="trouble-card">
-          <h3 class="problem-title">Problem: 초기 알고리즘 설계는 사용자 로그를 실시간으로 반영하는 방식이었으나,<br>로그가 추가될 때마다 알고리즘을 다시 계산하면서 추천 응답 속도 저하 발생</h3>
+          <h3 class="problem-title">사용자 행동 기반 관심 키워드 점수화</h3>
+          <p class="note-title">Root Cause:</p>
+          <ul class="cause-list">
+            <li>수집된 로그를 단순 저장하는 것만으로는 사용자가 어떤 키워드에 더 높은 관심을 보였는지 <strong>판단하기 어려웠음</strong></li>
+            <li>검색, 상품 조회, 카테고리 탐색, 장바구니, 장소 검색은 <strong>관심 강도가 서로 다르기 때문에</strong> 동일한 점수로 처리하면 추천 품질이 떨어질 수 있었음</li>
+            <li>사용자가 오래 머물거나 많이 스크롤한 페이지와 잠깐 방문한 페이지를 동일하게 평가하면 <strong>관심도 계산이 왜곡</strong>될 수 있었음</li>
+            <li>하나의 사용자가 여러 이메일 연동 계정에서 로그를 생성할 수 있어 <strong>사용자 단위로 관심 키워드를 통합</strong>할 필요가 있었음</li>
+          </ul>
+
+          <div class="flow-diagram" aria-label="관심 키워드 점수화 흐름도">
+            <div class="flow-row" style="--flow-count: 5;">
+              <p class="flow-label">키워드 분석</p>
+              <div class="flow-steps">
+                <div class="flow-step"><span class="flow-tag">TRIGGER</span><span class="flow-text">추천 요청 발생</span></div>
+                <div class="flow-step"><span class="flow-tag query">QUERY</span><span class="flow-text">MySQL 로그 조회</span></div>
+                <div class="flow-step"><span class="flow-tag">WEIGHT</span><span class="flow-text">로그 타입별 가중치 적용</span></div>
+                <div class="flow-step"><span class="flow-tag warn">CALC</span><span class="flow-text danger">체류·스크롤·클릭 점수 반영</span></div>
+                <div class="flow-step"><span class="flow-tag">SCORE</span><span class="flow-text">키워드 관심 점수 계산</span></div>
+              </div>
+            </div>
+            <div class="flow-row" style="--flow-count: 6;">
+              <p class="flow-label emphasis">통합 분석</p>
+              <div class="flow-steps">
+                <div class="flow-step"><span class="flow-tag">COLLECT</span><span class="flow-text">사용자 이메일별 점수 수집</span></div>
+                <div class="flow-step"><span class="flow-tag query">MERGE</span><span class="flow-text">사용자 단위 통합</span></div>
+                <div class="flow-step"><span class="flow-tag query">SUM</span><span class="flow-text">중복 키워드 합산</span></div>
+                <div class="flow-step"><span class="flow-tag">SORT</span><span class="flow-text">점수 기준 정렬</span></div>
+                <div class="flow-step"><span class="flow-tag">EXTRACT</span><span class="flow-text">상위 키워드 추출</span></div>
+                <div class="flow-step"><span class="flow-tag">REDIS</span><span class="flow-text">Redis 관심 점수 저장</span></div>
+              </div>
+            </div>
+          </div>
+
           <div class="solution-box">
             <p class="note-title">Solution Steps:</p>
             <ol class="step-list">
-              <li>로그가 저장될 때마다 추천 알고리즘을 즉시 실행하지 않고, 먼저 사용자의 로그 변경 상태만 기록하도록 변경</li>
-              <li>추천 요청 시 기존 관심 키워드 점수 데이터가 있고 신규 로그가 기준치 미만이면, 전체 로그를 재분석하지 않고 기존 점수와 추천 결과를 재사용</li>
-              <li>신규 로그가 기준치만큼 쌓였을 때만 개인 알고리즘을 다시 실행해 관심 키워드 점수를 재계산하도록 구성</li>
-              <li>재계산이 필요한 경우 기존 추천 결과를 삭제하고, 검색/상품/카테고리/장바구니/장소 로그를 다시 분석해 최신 관심 키워드를 생성</li>
+              <li>검색, 상품, 카테고리, 장바구니, 장소 로그에 서로 다른 기본 가중치를 부여하는 <strong>LogActionWeight 설계</strong></li>
+              <li><strong>체류 시간과 총 스크롤 값</strong>을 추가 가중치로 반영해 적극적으로 탐색한 페이지의 키워드 점수가 더 높아지도록 구성</li>
+              <li><strong>WeightingInterest 추상 클래스</strong>로 전략 패턴을 만들고, 상품/검색/카테고리/장바구니별 관심도 계산 로직을 분리</li>
+              <li>상품 로그에서는 카테고리, 성별/시즌 정보, 좋아요 여부, 장바구니 클릭, 상품정보 더보기 클릭 등을 <strong>추가 점수로 반영</strong></li>
+              <li>장바구니 로그에서는 상품 수량과 최근 장바구니 이벤트를 반영해 <strong>구매 의도에 가까운 행동</strong>의 점수를 높게 계산</li>
+              <li>장소 로그에서는 검색어, 주소 지역, 장소 카테고리를 분리해 <strong>장소 추천에 활용 가능한 키워드</strong>로 변환</li>
+              <li>여러 이메일 연동 계정에서 수집된 로그를 사용자 기준으로 통합하고, <strong>중복 키워드는 점수를 합산</strong>해 쇼핑/장소 타입별 관심 키워드로 정렬</li>
             </ol>
+          </div>
 
-            <p class="result-box">
-              <strong>Final Result/Prevention:</strong>
-              로그가 들어올 때마다 추천 알고리즘을 실행하던 구조를 개선해 불필요한 재계산을 줄였고, 기준이 충족될 때만 개인 알고리즘을 갱신하도록 변경<br>
-              정량 측정은 진행하지 못했지만, 추천 요청마다 외부 API를 호출하던 구조를 기준 충족 시 재계산하는 방식으로 변경해 반복 요청에서 불필요한 호출을 줄일 수 있는 구조로 개선
-            </p>
+          <div class="result-box">
+            <p class="note-title">Result:</p>
+            <ul class="result-list">
+              <li>원시 행동 로그를 <strong>키워드 + 타입 + 점수</strong> 형태의 정량 데이터로 변환하는 관심도 계산 로직 구현</li>
+              <li>단순 클릭 수가 아니라 행동 유형, 체류 시간, 스크롤, 장바구니, 좋아요 등 <strong>실제 관심 강도</strong>를 반영하도록 개선</li>
+              <li><strong>쇼핑 관심 키워드와 장소 관심 키워드</strong>를 분리해 상품 추천, 장소 추천, 마이페이지 차트에 재사용 가능한 구조 마련</li>
+              <li>여러 연결 계정의 로그를 사용자 기준으로 통합해 <strong>개인화 추천의 정확도</strong>를 높일 수 있는 기반 구축</li>
+            </ul>
           </div>
         </article>
-      </div>
-    </section>
 
-    <section class="module" aria-labelledby="links-title">
-      <span class="module-label">MODULE: 06. Links</span>
-      <div class="module-inner">
-        <header class="section-head section-head-centered">
-          <span class="section-number">06</span>
-          <h2 class="section-title" id="links-title">프로젝트 링크</h2>
-        </header>
+        <article class="trouble-card">
+          <h3 class="problem-title">추천 결과 캐싱 및 재사용</h3>
+          <p class="note-title">Root Cause:</p>
+          <ul class="cause-list">
+            <li>추천 요청이 들어올 때마다 <strong>전체 행동 로그를 다시 분석</strong>하면 응답 시간이 길어지고 서버 부하가 증가함</li>
+            <li>추천 결과 생성 과정에서 <strong>OpenAI, Naver API</strong> 등 외부 API 호출이 포함되어 있어 반복 요청 시 비용과 지연 시간이 커질 수 있음</li>
+            <li>사용자의 로그가 거의 변하지 않았는데도 매번 <strong>관심 키워드와 추천 결과를 재계산</strong>하는 것은 비효율적이었음</li>
+            <li>반대로 새로운 로그가 일정량 이상 쌓였을 때는 기존 추천 결과를 계속 재사용하면 <strong>최신 관심사가 반영되지 않는 문제</strong>가 있었음</li>
+          </ul>
 
-        <div class="repo-card">
-          <p class="repo-label">&lt;&gt; GitHub Repository</p>
-          <a class="repo-link" href="https://github.com/skxcv312/algoboza" target="_blank" rel="noreferrer">https://github.com/skxcv312/algoboza</a>
-        </div>
+          <div class="flow-diagram" aria-label="추천 결과 캐싱 및 재사용 흐름도">
+            <div class="flow-row" style="--flow-count: 5;">
+              <p class="flow-label">캐시 재사용</p>
+              <div class="flow-steps">
+                <div class="flow-step"><span class="flow-tag">REQUEST</span><span class="flow-text">추천 요청 발생</span></div>
+                <div class="flow-step"><span class="flow-tag">REDIS QUERY</span><span class="flow-text">점수/응답 조회</span></div>
+                <div class="flow-step"><span class="flow-tag">VERIFY</span><span class="flow-text">event 갱신 횟수 검증</span></div>
+                <div class="flow-step"><span class="flow-tag query">VALIDATION</span><span class="flow-text">기존 추천 결과 재사용</span></div>
+                <div class="flow-step"><span class="flow-tag">RESPONSE</span><span class="flow-text">즉시 응답 반환</span></div>
+              </div>
+            </div>
+            <div class="flow-row" style="--flow-count: 6;">
+              <p class="flow-label emphasis">재계산/갱신</p>
+              <div class="flow-steps">
+                <div class="flow-step"><span class="flow-tag">EVENT</span><span class="flow-text">로그 업데이트</span></div>
+                <div class="flow-step"><span class="flow-tag warn">TRIGGER</span><span class="flow-text danger">기준값 초과</span></div>
+                <div class="flow-step"><span class="flow-tag">RE-CALC</span><span class="flow-text">관심 점수 재계산</span></div>
+                <div class="flow-step"><span class="flow-tag">API</span><span class="flow-text">FastAPI 추천 요청</span></div>
+                <div class="flow-step"><span class="flow-tag">FILTER</span><span class="flow-text">중복 추천 제외</span></div>
+                <div class="flow-step"><span class="flow-tag warn">CACHE</span><span class="flow-text danger">Redis 결과 저장</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="solution-box">
+            <p class="note-title">Solution Steps:</p>
+            <ol class="step-list">
+              <li>관심 키워드 점수 결과를 Redis에 저장하는 <strong>KeywordScoreRedisEntity 구조 설계</strong></li>
+              <li>추천 응답 결과를 <strong>JSON 형태로 Redis에 저장</strong>해 동일 사용자의 반복 요청 시 기존 결과를 즉시 반환하도록 구성</li>
+              <li>로그가 저장될 때마다 <strong>eventUpdateNum</strong>을 증가시켜 사용자의 로그 변경 횟수를 추적</li>
+              <li>추천 요청 시 Redis에 저장된 관심 키워드가 있고 변경 횟수가 기준값 미만이면 <strong>기존 점수와 추천 결과를 재사용</strong></li>
+              <li>로그 변경 횟수가 <strong>100회 이상</strong>이면 기존 추천 응답을 삭제하고 관심 키워드 점수와 추천 결과를 다시 생성</li>
+              <li>추천 결과 생성 후 <strong>중복 상품/장소 제목을 제거</strong>해 사용자에게 반복된 추천이 노출되지 않도록 후처리</li>
+            </ol>
+          </div>
+
+          <div class="result-box">
+            <p class="note-title">Result:</p>
+            <ul class="result-list">
+              <li>반복 추천 요청에서 불필요한 로그 재분석과 외부 API 호출을 줄여 <strong>응답 효율 개선</strong></li>
+              <li><strong>Redis 캐싱</strong>을 통해 추천 결과를 빠르게 재사용하면서도, 로그가 일정량 이상 변경되면 최신 관심사를 반영하도록 균형 있게 설계</li>
+              <li><strong>OpenAI/Naver API 호출 비용과 서버 처리 부담</strong>을 줄일 수 있는 구조로 개선</li>
+              <li>관심 키워드 점수와 추천 응답을 분리 저장해 차트, 추천 목록 등 여러 기능에서 <strong>재사용 가능한 캐시 구조 확보</strong></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="trouble-card">
+          <h3 class="problem-title">YouTube 영상 요약 비용 최적화</h3>
+          <p class="note-title">Root Cause:</p>
+          <ul class="cause-list">
+            <li>YouTube 영상 전체 자막을 AI 요약 모델에 그대로 전달하면 영상 길이에 비례해 <strong>입력 토큰 수가 과도하게 증가</strong>함</li>
+            <li>긴 영상일수록 <strong>OpenAI API 비용과 응답 시간</strong>이 증가하고, 요약 요청 실패 가능성도 높아질 수 있었음</li>
+            <li>모든 영상에 자막이 제공되는 것이 아니기 때문에 <strong>자막이 없는 경우 요약 기능이 중단</strong>될 수 있었음</li>
+            <li>짧은 영상은 정보량이 적어 추천 콘텐츠로서 가치가 낮고, <strong>요약 비용 대비 효율</strong>이 떨어질 수 있었음</li>
+          </ul>
+
+          <div class="flow-diagram" aria-label="YouTube 영상 요약 비용 최적화 흐름도">
+            <div class="flow-row" style="--flow-count: 6;">
+              <p class="flow-label">영상 추천</p>
+              <div class="flow-steps">
+                <div class="flow-step"><span class="flow-tag">QUERY</span><span class="flow-text">관심 점수 조회</span></div>
+                <div class="flow-step"><span class="flow-tag">FASTAPI</span><span class="flow-text">YouTube 추천 API</span></div>
+                <div class="flow-step"><span class="flow-tag">AI</span><span class="flow-text">OpenAI 키워드 생성</span></div>
+                <div class="flow-step"><span class="flow-tag query">SEARCH</span><span class="flow-text">YouTube Data 검색</span></div>
+                <div class="flow-step"><span class="flow-tag">FILTER</span><span class="flow-text">중복 추천 제외</span></div>
+                <div class="flow-step"><span class="flow-tag">LIST</span><span class="flow-text">추천 목록 반환</span></div>
+              </div>
+            </div>
+            <div class="flow-row" style="--flow-count: 6;">
+              <p class="flow-label emphasis">요약 최적화</p>
+              <div class="flow-steps">
+                <div class="flow-step"><span class="flow-tag">START</span><span class="flow-text">요약 요청 발생</span></div>
+                <div class="flow-step"><span class="flow-tag">TRANSCRIPT</span><span class="flow-text">자막 데이터 조회</span></div>
+                <div class="flow-step"><span class="flow-tag warn">CUT</span><span class="flow-text danger">10~600초 필터링</span></div>
+                <div class="flow-step"><span class="flow-tag">AI</span><span class="flow-text">필터링 자막 전달</span></div>
+                <div class="flow-step"><span class="flow-tag query">REPLACE</span><span class="flow-text">설명란 대체 요약</span></div>
+                <div class="flow-step"><span class="flow-tag">RESPONSE</span><span class="flow-text">4문장 한국어 반환</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="solution-box">
+            <p class="note-title">Solution Steps:</p>
+            <ol class="step-list">
+              <li><strong>YouTube Data API</strong>를 통해 영상 제목, 채널, 썸네일, 업로드일, 재생 시간 등 기본 메타데이터를 먼저 조회</li>
+              <li>영상 길이를 초 단위로 변환한 뒤 <strong>180초 미만의 짧은 영상은 추천 대상에서 제외</strong></li>
+              <li><strong>YouTube Transcript API</strong>로 자막을 조회하되, 전체 자막을 사용하지 않고 <strong>10초부터 600초까지의 구간만 필터링</strong></li>
+              <li>필터링된 자막 텍스트만 <strong>OpenAI 요약 모델</strong>에 전달해 불필요한 입력 토큰 사용을 줄임</li>
+              <li>자막이 없거나 내용이 부족한 경우에는 <strong>영상 설명란을 대체 입력</strong>으로 사용해 요약 기능이 중단되지 않도록 처리</li>
+              <li>요약 모델의 출력 길이를 제한하고, <strong>4문장 이내의 한국어 요약</strong>으로 응답하도록 프롬프트를 구성</li>
+            </ol>
+          </div>
+
+          <div class="result-box">
+            <p class="note-title">Result:</p>
+            <ul class="result-list">
+              <li>전체 자막을 그대로 전달하던 방식에서 필요한 구간만 선별해 전달하는 방식으로 변경하여 <strong>AI 입력 토큰 사용량을 절감</strong></li>
+              <li>긴 영상에서도 <strong>요약 요청의 비용과 응답 시간</strong>을 줄일 수 있는 구조로 개선</li>
+              <li>자막이 없는 영상도 설명란을 활용해 <strong>요약 실패 가능성</strong>을 낮춤</li>
+              <li>짧은 영상 제외, 자막 구간 제한, 출력 길이 제한을 통해 <strong>추천 영상 요약의 품질과 API 사용 효율</strong>을 함께 개선</li>
+            </ul>
+          </div>
+        </article>
       </div>
     </section>
   </main>

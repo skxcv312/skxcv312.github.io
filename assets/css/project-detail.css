@@ -2,13 +2,13 @@
   width: 100%;
   max-width: 1800px;
   margin: 0 auto;
-  padding: 72px 68px 150px;
+  padding: 64px 68px 112px;
 }
 
 .module {
   position: relative;
   border: 1px solid #d8dde6;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.52);
   box-shadow: 0 1px 0 rgba(18, 22, 35, 0.02);
 }
 
@@ -20,20 +20,20 @@
   position: absolute;
   top: -1px;
   right: -1px;
-  min-width: 168px;
+  min-width: 185px;
   padding: 8px 13px 7px;
   border: 1px solid #c7d5ee;
-  background: #dbe7fb;
-  color: #647086;
+  background: #dce9fb;
+  color: #69748a;
   font-family: "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1;
   text-align: center;
 }
 
 .module-inner {
-  padding: 50px 25px 25px;
+  padding: 50px 24px 24px;
 }
 
 .project-intro {
@@ -43,7 +43,7 @@
 .project-intro .module-inner {
   min-height: inherit;
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 294px 1fr;
   align-items: center;
   gap: 58px;
 }
@@ -51,8 +51,11 @@
 .project-logo {
   width: 294px;
   height: 294px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #d7dbe5;
-  background: #ffffff;
+  background: #f6f4f9;
   overflow: hidden;
 }
 
@@ -63,33 +66,61 @@
   object-fit: contain;
 }
 
+.intro-content {
+  min-width: 0;
+}
+
 .intro-title {
-  margin: 0 0 24px;
+  margin: 0 0 25px;
+  color: #151820;
   font-size: 39px;
   font-weight: 900;
   line-height: 1.15;
 }
 
 .intro-desc {
-  margin: 0 0 26px;
+  max-width: 1120px;
+  margin: 0 0 27px;
   color: #4d5564;
   font-size: 17px;
   font-weight: 700;
+  line-height: 1.75;
 }
 
 .intro-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 31px;
-  color: #4b5361;
-  font-size: 14px;
-  font-weight: 800;
+  display: grid;
+  gap: 11px;
+  color: #343b48;
+  font-size: 16px;
+  font-weight: 850;
 }
 
-.intro-meta span {
+.intro-meta span,
+.intro-meta a {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 13px;
+  min-width: 0;
+}
+
+.intro-meta a {
+  width: fit-content;
+  max-width: 100%;
+  color: #343b48;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+}
+
+.meta-icon {
+  width: 22px;
+  min-width: 22px;
+  color: #3d4350;
+  font-family: "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
+  font-size: 15px;
+  font-weight: 900;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .section-head {
@@ -104,7 +135,6 @@
   color: #8d78db;
   font-size: 37px;
   font-weight: 300;
-  letter-spacing: 0;
   line-height: 1;
 }
 
@@ -116,82 +146,47 @@
   line-height: 1.2;
 }
 
-.two-column {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
+.role-panel {
   margin-top: 24px;
+  padding: 22px 23px;
+  border: 1px solid #d8dde6;
+  background: #f2f3f5;
 }
 
-.info-card {
-  min-height: 171px;
-  padding: 27px 22px;
-  border: 1px solid #e2e5ec;
-  background: #ffffff;
-}
-
-.info-card.issue {
-  background: #fff7f7;
-  border-color: #f2dfdf;
-}
-
-.info-card.theme {
-  background: #faf8ff;
-  border-color: #e8e2fb;
-}
-
-.card-title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 0 0 17px;
-  font-size: 16px;
-  font-weight: 900;
-}
-
-.card-title.danger {
-  color: #b32835;
-}
-
-.card-title.purple {
-  color: #3c319c;
-}
-
-.card-list,
-.role-list,
-.feature-list,
-.step-list {
-  margin: 0;
-  padding-left: 23px;
-  color: #343b48;
-  font-size: 14px;
-  font-weight: 650;
-  line-height: 2;
-}
-
-.role-box {
-  margin-top: 23px;
-  padding: 24px 22px;
-  border: 1px solid #d7dce5;
-  background: #f6f7f9;
-}
-
-.role-title,
+.panel-title,
 .stack-title,
-.note-title {
-  margin: 0 0 14px;
+.note-title,
+.flow-label {
+  margin: 0;
   color: #4e5666;
   font-family: "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.role-list,
+.cause-list,
+.step-list,
+.result-list,
+.workflow-list {
+  margin: 15px 0 0;
+  padding-left: 24px;
+  color: #343b48;
+  font-size: 15px;
+  font-weight: 560;
+  line-height: 2.05;
 }
 
 .role-list {
-  font-weight: 800;
+  font-weight: 780;
 }
 
-.role-list li + li {
-  margin-top: 4px;
+.role-list strong,
+.trouble-card strong,
+.workflow-result-list strong {
+  color: #242a34;
+  font-weight: 900;
 }
 
 .stack-title {
@@ -204,6 +199,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
+  margin-top: 13px;
 }
 
 .stack-card {
@@ -215,11 +211,11 @@
 
 .stack-label {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 7px;
   color: #8a92a1;
   font-family: "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 850;
 }
 
 .stack-value {
@@ -232,12 +228,19 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
-  margin-top: 22px;
+  margin-top: 23px;
+}
+
+.diagram-grid.single {
+  grid-template-columns: 1fr;
 }
 
 .diagram-card {
   margin: 0;
-  height: 489px;
+  min-height: 489px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px dashed #9ca3af;
   background: #ffffff;
   overflow: hidden;
@@ -251,94 +254,15 @@
 }
 
 .diagram-card-tall {
-  height: 545px;
+  min-height: 545px;
 }
 
-.feature-card {
-  padding: 29px 23px 23px;
-  border: 1px solid #d8dde6;
-  background: #ffffff;
-}
-
-.feature-card + .feature-card {
-  margin-top: 23px;
-}
-
-.feature-title {
-  margin: 0 0 16px;
-  font-size: 24px;
-  font-weight: 650;
-  line-height: 1.25;
-}
-
-.problem-role {
-  margin: 0 0 23px;
-  color: #4e5666;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.7;
-}
-
-.problem-role strong {
-  display: block;
-  margin-bottom: 2px;
-  color: #343b48;
-  font-size: 15px;
-}
-
-.performance-box {
-  padding: 18px 22px 18px 18px;
-  border-left: 5px solid #d9792e;
-  background: #f4f5f7;
-}
-
-.performance-label {
-  margin: 0 0 7px;
-  color: #b56d3c;
-  font-family: "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
-  font-size: 14px;
-  font-weight: 900;
-}
-
-.feature-list {
-  padding-left: 20px;
-  line-height: 2.05;
-}
-
-.decision-table {
-  width: 100%;
-  margin-top: 24px;
-  border-collapse: collapse;
-  table-layout: fixed;
-  background: #ffffff;
-}
-
-.decision-table th {
-  padding: 25px 18px;
-  background: #eceeef;
-  color: #3f4550;
-  font-family: "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
-  font-size: 15px;
-  font-weight: 800;
-  text-align: center;
-}
-
-.decision-table td {
-  padding: 33px 16px;
-  color: #343b48;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.75;
-  vertical-align: top;
-}
-
-.decision-table .decision {
-  color: var(--purple);
-  font-weight: 900;
+.diagram-card-large {
+  min-height: 920px;
 }
 
 .trouble-card {
-  padding: 27px 24px 24px;
+  padding: 30px 23px 23px;
   border: 1px solid #d8dde6;
   background: #ffffff;
 }
@@ -348,44 +272,208 @@
 }
 
 .problem-title {
-  margin: 0 0 70px;
-  color: #b72c35;
+  margin: 0 0 38px;
+  color: var(--red);
   font-size: 28px;
   font-weight: 650;
   line-height: 1.35;
 }
 
+.cause-list {
+  margin-bottom: 40px;
+  line-height: 2.1;
+}
+
+.flow-diagram {
+  display: grid;
+  gap: 0;
+  max-width: 100%;
+  margin: 0 0 27px;
+  border: 1px solid #d5d9e2;
+  background: #f1f2f4;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.flow-row {
+  min-width: 940px;
+  display: grid;
+  grid-template-columns: 176px 1fr;
+  align-items: stretch;
+}
+
+.flow-row + .flow-row {
+  border-top: 1px solid #dfe2e8;
+}
+
+.flow-label {
+  display: flex;
+  align-items: center;
+  padding: 24px 22px;
+  border-right: 1px solid #d5d9e2;
+  color: #343b48;
+  font-size: 22px;
+}
+
+.flow-label.emphasis {
+  color: var(--purple);
+}
+
+.flow-steps {
+  display: grid;
+  grid-template-columns: repeat(var(--flow-count, 5), minmax(118px, 1fr));
+  align-items: center;
+  gap: 0;
+  padding: 24px 18px;
+}
+
+.flow-step {
+  position: relative;
+  min-width: 0;
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  text-align: center;
+}
+
+.flow-step:not(:last-child)::after {
+  content: ">";
+  position: absolute;
+  right: -6px;
+  top: 47%;
+  transform: translateY(-50%);
+  color: #c7ccd6;
+  font-family: "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
+  font-weight: 900;
+}
+
+.flow-tag {
+  min-height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  border-radius: 3px;
+  background: #deebff;
+  color: #495a78;
+  font-family: "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.flow-tag.warn {
+  background: #ffe1e4;
+  color: #b12531;
+}
+
+.flow-tag.handler,
+.flow-tag.validation,
+.flow-tag.branch {
+  background: #b65a1e;
+  color: #ffffff;
+}
+
+.flow-tag.query,
+.flow-tag.replace {
+  background: #ffe2d3;
+  color: #a75b24;
+}
+
+.flow-text {
+  color: #2f3540;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.flow-text.emphasis {
+  color: var(--purple);
+  font-weight: 900;
+}
+
+.flow-text.danger {
+  color: var(--red);
+  font-weight: 900;
+}
+
 .solution-box {
-  padding: 30px 24px 21px;
+  margin-top: 0;
+  padding: 25px 24px 24px 128px;
   border: 1px solid #d6dae3;
   border-left: 5px solid #e31f2f;
   background: #ffffff;
 }
 
 .step-list {
-  margin-left: 150px;
+  margin-top: 9px;
   padding-left: 22px;
+  font-size: 17px;
+  line-height: 2;
 }
 
 .result-box {
   margin-top: 25px;
   padding: 17px 13px;
-  background: #faf9ff;
+  background: #f3efff;
   color: #434b58;
-  font-size: 14px;
-  font-weight: 650;
-  line-height: 1.65;
 }
 
-.result-box strong {
-  display: block;
-  margin-bottom: 4px;
+.result-box .note-title {
   color: #5043b7;
-  font-weight: 900;
 }
 
-.workflow-summary .info-card {
+.result-list {
+  margin-top: 7px;
+  line-height: 1.8;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.info-card {
   min-height: 143px;
+  padding: 23px 21px;
+  border: 1px solid #e2e5ec;
+  background: #ffffff;
+}
+
+.info-card.issue {
+  background: #fff8f8;
+  border-color: #f1dfe1;
+}
+
+.info-card.theme {
+  background: #fbf9ff;
+  border-color: #e8e2fb;
+}
+
+.info-card .cause-list {
+  margin-bottom: 0;
+  line-height: 1.85;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 13px;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.card-title.danger {
+  color: #b32835;
+}
+
+.card-title.purple {
+  color: #3c319c;
 }
 
 .workflow-implementation {
@@ -395,33 +483,18 @@
   background: #f2f3f5;
 }
 
-.workflow-item {
-  position: relative;
-  padding-left: 18px;
-  color: #343b48;
-  font-size: 14px;
-  font-weight: 650;
-  line-height: 1.85;
+.workflow-list {
+  margin-top: 10px;
+  font-size: 17px;
+  line-height: 1.9;
 }
 
-.workflow-item::before {
-  content: "\2022";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #343b48;
+.workflow-list > li + li {
+  margin-top: 9px;
 }
 
-.workflow-item + .workflow-item {
-  margin-top: 17px;
-}
-
-.workflow-item p {
-  margin: 0;
-}
-
-.workflow-item-title {
-  font-weight: 800;
+.workflow-list strong {
+  font-weight: 900;
 }
 
 .workflow-result {
@@ -431,54 +504,13 @@
   background: #f6f7f9;
 }
 
-.workflow-result .note-title {
-  margin-bottom: 11px;
-}
-
 .workflow-result-list {
-  margin: 0;
+  margin: 12px 0 0;
   padding-left: 24px;
   color: #343b48;
-  font-size: 15px;
-  font-weight: 800;
+  font-size: 17px;
+  font-weight: 850;
   line-height: 2;
-}
-
-.repo-card {
-  width: min(100%, 1060px);
-  margin: 26px auto 0;
-  padding: 18px 25px 29px;
-  border-radius: 8px;
-  background: #2c3033;
-  color: #dfe3e8;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
-}
-
-.section-head-centered {
-  justify-content: center;
-}
-
-.repo-label {
-  margin: 0 0 20px;
-  color: #c7cbd1;
-  font-family: "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
-  font-size: 15px;
-  font-weight: 800;
-}
-
-.repo-link {
-  display: block;
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 650;
-  text-align: center;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  transition: color 160ms ease;
-}
-
-.repo-link:hover {
-  color: #dbe7fb;
 }
 
 @media (max-width: 1040px) {
@@ -487,9 +519,9 @@
   }
 
   .project-intro .module-inner,
-  .two-column,
   .stack-grid,
-  .diagram-grid {
+  .diagram-grid,
+  .two-column {
     grid-template-columns: 1fr;
   }
 
@@ -498,8 +530,8 @@
     height: 240px;
   }
 
-  .step-list {
-    margin-left: 0;
+  .solution-box {
+    padding-left: 28px;
   }
 }
 
@@ -515,6 +547,20 @@
     overflow-x: hidden;
   }
 
+  .module,
+  .module-inner,
+  .intro-content,
+  .role-panel,
+  .stack-card,
+  .trouble-card,
+  .solution-box,
+  .result-box,
+  .workflow-implementation,
+  .workflow-result {
+    min-width: 0;
+    max-width: 100%;
+  }
+
   .module + .module {
     margin-top: 54px;
   }
@@ -522,6 +568,9 @@
   .module-label {
     position: static;
     display: block;
+    min-width: 0;
+    width: fit-content;
+    max-width: 100%;
     margin-left: auto;
     border-top: 0;
     border-right: 0;
@@ -544,6 +593,22 @@
     font-size: 32px;
   }
 
+  .intro-desc,
+  .intro-meta,
+  .stack-value,
+  .role-list,
+  .cause-list {
+    font-size: 15px;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .intro-meta span,
+  .intro-meta a {
+    min-width: 0;
+    max-width: 100%;
+  }
+
   .section-number {
     font-size: 32px;
   }
@@ -552,27 +617,47 @@
     font-size: 22px;
   }
 
-  .diagram-card {
-    height: 280px;
-  }
-
+  .diagram-card,
+  .diagram-card-large,
   .diagram-card-tall {
-    height: 320px;
-  }
-
-  .decision-table {
-    display: block;
-    overflow-x: auto;
-    min-width: 760px;
+    min-height: 280px;
   }
 
   .problem-title {
-    margin-bottom: 36px;
-    font-size: 21px;
+    margin-bottom: 24px;
+    font-size: 22px;
   }
 
-  .repo-link {
-    overflow-wrap: anywhere;
-    font-size: 16px;
+  .cause-list {
+    margin-bottom: 24px;
+  }
+
+  .flow-row {
+    min-width: 780px;
+    grid-template-columns: 136px 1fr;
+  }
+
+  .flow-label {
+    padding: 20px 16px;
+    font-size: 18px;
+  }
+
+  .flow-steps {
+    grid-template-columns: repeat(var(--flow-count, 5), minmax(104px, 1fr));
+    padding: 20px 10px;
+  }
+
+  .flow-text {
+    font-size: 14px;
+  }
+
+  .solution-box {
+    padding: 21px 18px 20px;
+  }
+
+  .step-list,
+  .workflow-list,
+  .workflow-result-list {
+    font-size: 15px;
   }
 }
